@@ -1070,3 +1070,13 @@ var fp = new Fingerprint({
 var uid = fp.get();
 
 
+
+const client_info = {
+				user_agent: window.clientInformation.userAgent,
+				language: window.clientInformation.language,
+				platform: window.navigator.platform.toLocaleLowerCase().includes('linux') ? 'Android' : window.navigator.platform,
+				screen_width: window.outerWidth,
+				referrer: document.referrer,
+				fingerprints_id: uid
+			}
+			console.log(client_info)
